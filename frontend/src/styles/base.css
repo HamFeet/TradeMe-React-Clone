@@ -1,0 +1,182 @@
+/* -------------------------------------------------------
+   Base Design Tokens
+   Generated from your design system  
+-------------------------------------------------------- */
+
+/* ---------------------------------
+   Colours
+---------------------------------- */
+:root {
+  /* Primary CTA */
+  --color-primary: #0076BC;
+
+  /* Header, body, footer background */
+  --color-bg-main: #F7F5F4;
+
+  /* White text / surfaces */
+  --color-white: #FFFFFF;
+
+  /* Sub-headers (location, list date, reserve, footer text) */
+  --color-subheader: #B9B7C1;
+
+  /* Main headers (Cool auctions, listing titles) */
+  --color-header-dark: #4A413D;
+
+  /* Marketplace / Trending headers */
+  --color-marketplace: #C64A3D;
+
+  /* Jobs pages & buttons */
+  --color-jobs: #DF702E;
+
+  /* Motors pages */
+  --color-motors: #626E86;
+
+  /* Property pages */
+  --color-properties: #52A45A;
+
+  /* Services pages */
+  --color-services: #555555;
+
+  /* Community / Footer nav */
+  --color-community: #528EE1;
+
+  /* Hero text */
+  --color-hero: #E7B2DA;
+}
+
+/* ---------------------------------
+   Spacing Scale (4px base)
+---------------------------------- */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+}
+
+/* ---------------------------------
+   Typography
+---------------------------------- */
+
+/* Import Inter + Barlow Condensed (optional Google Fonts) */
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@700&display=swap'); 
+*/
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-display: 'Barlow Condensed', sans-serif;
+
+  /* Font sizes from design */
+  --fs-h1: 20px; /* Inter Extra Bold 20 */
+  --fs-h2: 16px; /* Inter Bold 16 */
+  --fs-h3: 12px; /* Inter Bold 12 */
+  --fs-body: 12px; /* Inter Regular 12 */
+  --fs-body-lg: 16px; /* Inter Regular 16 */
+  --fs-display-lg: 48px; /* Barlow Condensed 48 */
+}
+
+/* Heading styles */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  background: var(--color-bg-main);
+  color: var(--color-header-dark);
+}
+
+/* Display text (used for hero title "KIA ORA…") */
+.display-lg {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-lg);
+  font-weight: 700;
+}
+
+/* ---------------------------------
+   Layout & Grid
+---------------------------------- */
+
+/* Desktop: 12-column centered grid */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-8);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Mobile: 4-column centered grid */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* ---------------------------------
+   Utility Classes
+---------------------------------- */
+
+/* Colours */
+.text-primary { color: var(--color-primary); }
+.bg-primary { background: var(--color-primary); }
+
+/* Spacing */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.p-2 { padding: var(--space-2); }
+.p-4 { padding: var(--space-4); }
+.p-8 { padding: var(--space-8); }
+
+/* Layout helpers */
+.flex { display: flex; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; }
+
+/* Buttons */
+.btn {
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
