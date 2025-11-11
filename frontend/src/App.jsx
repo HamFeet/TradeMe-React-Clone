@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Header from '../src/common/Header/Header'
+import Header from './common/Header/Header'
 import './App.css'
+import './styles/base.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
