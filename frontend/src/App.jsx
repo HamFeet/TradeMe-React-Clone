@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from '../src/common/Header/Header'
+
 import './App.css'
 
 function App() {
@@ -8,6 +9,12 @@ function App() {
   return (
     <>
       <Header></Header>
+    <main>
+    
+    </main>
+
+ 
+
     </>
   )
 }
