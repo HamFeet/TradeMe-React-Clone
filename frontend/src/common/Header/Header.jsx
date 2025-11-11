@@ -1,5 +1,4 @@
-// import '../../styles/base.css'
-import styles from '../Header/Header.module.css'
+import styles from './Header.module.css'
 
 //React-Icons
 import { IoMdArrowDropdown } from "react-icons/io";
