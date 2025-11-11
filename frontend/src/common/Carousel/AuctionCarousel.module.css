@@ -1,0 +1,59 @@
+.section {
+  padding: 16px 0;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 12px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.navBtn {
+  appearance: none;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.navBtn:hover {
+  background: #f8fafc;
+}
+
+.error {
+  color: #b00020;
+  padding: 8px 12px;
+  background: #fde7e9;
+  border-radius: 10px;
+  margin: 0 8px 12px;
+}
+
+.scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 320px);
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 8px 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.cardWrap {
+  scroll-snap-align: start;
+}

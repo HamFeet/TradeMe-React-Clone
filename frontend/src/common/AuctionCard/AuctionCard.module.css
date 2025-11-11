@@ -1,0 +1,137 @@
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+/* top-right “unfunctional” button with triangle ribbon */
+.cornerBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cornerBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 44px solid #facc15; /* amber */
+  border-left: 44px solid transparent;
+}
+
+.image {
+  height: 140px;
+  background: #f2f2f2;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.metaPill {
+  background: #f4f4f5;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.metaSpacer {
+  flex: 1;
+}
+.metaText {
+  color: #777;
+}
+
+.title {
+  padding: 6px 12px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  min-height: 42px;
+  margin: 0;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px 14px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 8px;
+}
+
+.priceLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+.priceValue {
+  margin-top: 2px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* skeleton helpers (used by carousel’s SkeletonCard) */
+.skeleton .image {
+  background: #ececec;
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skelLine {
+  height: 14px;
+  background: #ececec;
+  margin: 8px 12px 0;
+  border-radius: 6px;
+}
+.mt12 {
+  margin-top: 12px;
+}
+.w70 {
+  width: 70%;
+}
+
+.skelGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 12px 14px;
+}
