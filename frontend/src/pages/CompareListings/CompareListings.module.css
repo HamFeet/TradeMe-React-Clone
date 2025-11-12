@@ -1,0 +1,68 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #44413d;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #0076bc;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.removeAll {
+  color: #0076bc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.footerNote {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 13px;
+  color: #777;
+}
+
+.links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.links a {
+  color: #0076bc;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
