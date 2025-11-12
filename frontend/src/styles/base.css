@@ -11,6 +11,9 @@
   /* White text / surfaces */
   --color-white: #FFFFFF;
 
+  /* White text / surfaces */
+  --color-watchlist-text: #933C00;
+
   /* Sub-headers (location, list date, reserve, footer text) */
   --color-subheader: #B9B7C1;
 
@@ -37,6 +40,16 @@
 
   /* Hero text */
   --color-hero: #E7B2DA;
+
+  /* Watchlist button */
+  --color-watchlist: #FCC31F;
+
+  /* Watchlist button */
+  --color-purchase: #3E74CB;
+
+  /* Border */
+  --color-border: #D9D9D9
+
 }
 
 /* ---------------------------------
