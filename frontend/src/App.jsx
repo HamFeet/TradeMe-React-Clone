@@ -16,8 +16,8 @@ function App() {
   return (
     <>
       <Header/>
-      <AboutTheSeller/>
-      {/* <QuestionAndAnswer/> */}
+      {/* <AboutTheSeller/>  */}
+      <QuestionAndAnswer/>
       {/* <ListingDescriptionStack item={dummyItems[0]}/> */}
       {/* <div style={{ padding: 16 }}>
         <AuctionCarousel title="Cool auctions" useDummy />
