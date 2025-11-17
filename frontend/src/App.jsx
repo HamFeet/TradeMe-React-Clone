@@ -1,17 +1,29 @@
-import Header from "./common/Header/Header.jsx";
+import { Route, Routes } from 'react-router-dom'
 import "./App.css";
-import AuctionCarousel from "./common/Carousel/AuctionCarousel.jsx";
-import Footer from "./common/Footer/Footer.jsx";
 import "./styles/base.css";
+
+//Pages
+import Landing from './pages/Landing/Landing.jsx';
+import Listing from './pages/Listing/Listing.jsx';
+import CompareListings from './pages/CompareListings/CompareListings.jsx';
+
+//Components
+import Header from "./common/Header/Header.jsx";
+import Footer from "./common/Footer/Footer.jsx";
+
+//Data
+import { dummyItems } from './common/data/dummyItems.js'
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <div style={{ padding: 16 }}>
-        <AuctionCarousel title="Cool auctions" useDummy />
-      </div>
-      <Footer></Footer>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Landing/>}></Route>
+          <Route path='/listing' element={<Listing item={dummyItems[0]}/>}></Route>
+          <Route path='/compare' element={<CompareListings/>}></Route>
+        </Routes>
+      <Footer/>
     </>
   );
 }
