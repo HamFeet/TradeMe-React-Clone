@@ -9,6 +9,14 @@
   flex-direction: column;
 }
 
+/* position the wishlist button */
+.cardWishlist {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
 /* top-right “unfunctional” button with triangle ribbon */
 .cornerBtn {
   position: absolute;
