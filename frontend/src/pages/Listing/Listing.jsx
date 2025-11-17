@@ -7,7 +7,7 @@ import AboutTheSeller from "../../assets/Listing/AboutTheSeller/AboutTheSeller.j
 function Listing(item) {
   return (
     <div>
-      <ListingDescriptionStack item={item}/>
+      <ListingDescriptionStack listing={item}/>
       <QuestionAndAnswer/>
       <AboutTheSeller/>
     </div>

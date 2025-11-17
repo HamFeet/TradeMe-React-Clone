@@ -5,17 +5,17 @@ import { LiaBinocularsSolid } from "react-icons/lia";
 
 
 
-function ListingDescriptionStack({ item }) {
+function ListingDescriptionStack({ listing }) {
   return (
     <div className={styles.content}>
       <div className={styles.watchlistContainer}>
-        <h1>{item.title}</h1>
+        <h1>{listing.item.title}</h1>
         <button className={`${styles.button} ${styles.buttonWatchlist}`}><LiaBinocularsSolid/>Add To Watchlist</button>
         <p>5 others watching</p>
       </div>
       <div className={styles.biddingContainer}>
         <p>Starting Price</p>
-        <h1>${item.start_price}</h1>
+        <h1>${listing.item.start_price}</h1>
         <button className={`${styles.button} ${styles.buttonPurchase}`}>Place bid</button>
         <button className={`${styles.button} ${styles.buttonPurchase}`}>Buy Now</button>
         <button className={`${styles.button} ${styles.buttonOffer}`}>Make offer</button>
