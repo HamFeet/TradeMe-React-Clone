@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./AuctionCard.module.css";
+import WishlistButton from "../WishlistButton/WishlistButton.jsx";
 
 function money(n) {
   if (typeof n !== "number") return "-";
@@ -17,12 +18,18 @@ export default function AuctionCard({ item }) {
 
   return (
     <article className={styles.card}>
-      {/* top-right “unfunctional” button */}
-      <button
-        type="button"
-        className={styles.cornerBtn}
-        aria-label="More options"
-      />
+      {/* top-right wishlist */}
+      <div className={styles.cardWishlist}>
+        <WishlistButton
+          itemId={item?._id}
+          defaultActive={false}
+          size={50}
+          onToggle={(active, id) => {
+            // TODO: hook into your API or localStorage
+            console.log("wishlist:", { id, active });
+          }}
+        />
+      </div>
 
       {/* image placeholder */}
       <div className={styles.image} />

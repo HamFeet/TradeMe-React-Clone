@@ -1,0 +1,45 @@
+.btn {
+  --wl-size: 28px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--wl-size);
+  height: var(--wl-size);
+  border-radius: 999px;
+
+  /* subtle hover background */
+  transition: background-color 120ms ease, transform 120ms ease,
+    opacity 120ms ease;
+}
+.btn:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.icon {
+  width: calc(var(--wl-size) * 0.9);
+  height: calc(var(--wl-size) * 0.9);
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* If you only have one icon, we’ll style it when active */
+.active .icon {
+  /* tint via filter; adjust as needed or swap to activeSrc file */
+  filter: hue-rotate(320deg) saturate(1.6) brightness(1.05);
+}
