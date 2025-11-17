@@ -1,13 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
 import "./App.css";
 import "./styles/base.css";
 
+//Pages
+import Landing from './pages/Landing/Landing.jsx';
+import Listing from './pages/Listing/Listing.jsx';
+import CompareListings from './pages/CompareListings/CompareListings.jsx';
+
 //Components
 import Header from "./common/Header/Header.jsx";
-import AuctionCarousel from "./common/Carousel/AuctionCarousel.jsx";
 import Footer from "./common/Footer/Footer.jsx";
-import ListingDescriptionStack from "./common/ListingDescriptionStack/ListingDescriptionStack.jsx";
-import QuestionAndAnswer from "./assets/Listing/QuestionAndAnswer/QuestionAndAnswer.jsx";
-import AboutTheSeller from "./assets/Listing/AboutTheSeller/AboutTheSeller.jsx";
 
 //Data
 import { dummyItems } from './common/data/dummyItems.js'
@@ -16,12 +18,11 @@ function App() {
   return (
     <>
       <Header/>
-      <AboutTheSeller/>
-      {/* <QuestionAndAnswer/> */}
-      {/* <ListingDescriptionStack item={dummyItems[0]}/> */}
-      {/* <div style={{ padding: 16 }}>
-        <AuctionCarousel title="Cool auctions" useDummy />
-      </div> */}
+        <Routes>
+          <Route path='/' element={<Landing/>}></Route>
+          <Route path='/listing' element={<Listing item={dummyItems[0]}/>}></Route>
+          <Route path='/compare' element={<CompareListings/>}></Route>
+        </Routes>
       <Footer/>
     </>
   );
