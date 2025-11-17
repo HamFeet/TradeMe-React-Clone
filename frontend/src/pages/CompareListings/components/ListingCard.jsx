@@ -1,17 +1,25 @@
 import styles from "./ListingCard.module.css";
+import ListingImage from "./ListingImage";
+import ListingInfo from "./ListingInfo";
+import ListingStats from "./ListingStats";
 
 /**
- * Day 1: Placeholder for a single listing.
- * - Only basic box + title for now.
- * - Subcomponents will be added on Day 2.
+ * Day 2:
+ * ListingCard now uses three visual sub-components.
  */
-export default function ListingCard({ title }) {
+export default function ListingCard({
+  title = "Coffee Table wooden",
+  image = "/example-table.jpg",
+  location = "Auckland City, Auckland",
+  closes = "Wed 18 Dec, 8:30 pm",
+  views = 177,
+  watchers = 15,
+}) {
   return (
     <div className={styles.card}>
-      <div className={styles.imagePlaceholder}>Image area</div>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.location}>Auckland City, Auckland</p>
-      <p className={styles.info}>Closes: Wed 18 Dec, 8:30 pm</p>
+      <ListingImage image={image} />
+      <ListingInfo title={title} location={location} closes={closes} />
+      <ListingStats views={views} watchers={watchers} />
     </div>
   );
 }
