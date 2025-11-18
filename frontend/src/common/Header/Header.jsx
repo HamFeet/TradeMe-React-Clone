@@ -13,26 +13,35 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 function Header() {
     return (
         <div className={styles.header}>
-            <div className={styles.headerTop}>
-                <button>Trade Me</button>
-                <button>Trade Me Insurance</button>
-                <button>Holiday Homes</button>
-                <button>Find Someone</button>
-                <button>Motor Web</button>
-                <button>homes.co.nz</button>
-                <button>Register</button>
-                <button>Log In</button>
-            </div>
-            <div className={styles.headerBottom}>
-                <div className={styles.headerLeft}>
-                    <img src="/trademeLogo.png" alt="TradeMe Logo" />
-                    <button>Browse<IoMdArrowDropdown/></button>
+            <div className={styles.headerTopBackground}>
+                <div className={styles.headerTop}>
+                    <div>
+                        <button>Trade Me</button>
+                        <button>Trade Me Insurance</button>
+                        <button>Holiday Homes</button>
+                        <button>Find Someone</button>
+                        <button>Motor Web</button>
+                        <button>homes.co.nz</button>
+                    </div>
+                    <div>
+                        <button>Register</button>
+                        <button>Log In</button>
+                    </div>
+
                 </div>
-                <div className={styles.headerRight}>
-                    <button><LiaBinocularsSolid/>Watchlist</button>
-                    <button><FaRegHeart/>Favourites</button>
-                    <button><HiOutlinePencil/>Start a listing</button>
-                    <button>My Trade Me<IoPersonCircleOutline/></button>
+            </div>
+            <div className={styles.headerBottomBackground}>
+                <div className={styles.headerBottom}>
+                    <div className={styles.headerLeft}>
+                        <img src="/trademeLogo.png" alt="TradeMe Logo" />
+                        <button>Browse<IoMdArrowDropdown/></button>
+                    </div>
+                    <div className={styles.headerRight}>
+                        <button><LiaBinocularsSolid/>Watchlist</button>
+                        <button><FaRegHeart/>Favourites</button>
+                        <button><HiOutlinePencil/>Start a listing</button>
+                        <button>My Trade Me<IoPersonCircleOutline/></button>
+                    </div>
                 </div>
             </div>
         </div>
