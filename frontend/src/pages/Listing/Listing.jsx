@@ -16,7 +16,6 @@ function Listing({ item }) {
       </div>
 
       <div className={styles.rightColumn}>
-        {/* This should contain the watchlist button + bidding box */}
         <ListingDescriptionStack item={item} sidebar />
       </div>
 
