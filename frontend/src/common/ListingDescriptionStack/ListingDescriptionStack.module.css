@@ -71,7 +71,7 @@
 .biddingContainer p {
   margin: var(--space-5) 0 var(--space-1) 0;
   font-size: var(--fs-body);
-  color: var(--color-subheader);
+  color: var(--color-header-dark);
 }
 
 .biddingContainer h1 {

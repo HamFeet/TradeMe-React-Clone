@@ -5,20 +5,27 @@ import AboutTheSeller from "../../assets/Listing/AboutTheSeller/AboutTheSeller.j
 
 import styles from "./Listing.module.css";
 
-function Listing({ item }) {
+//Context
+import { useSelectedItem } from "../../context/SelectedItemContext";
+
+function Listing() {
+  const { selectedItem } = useSelectedItem();
+
+  if (!selectedItem) {
+    return <p>No item selected</p>;
+  }
+
   return (
     <div className={styles.container}>
-
       <div className={styles.leftColumn}>
-        <ItemDisplay item={item} />
+        <ItemDisplay item={selectedItem} />
         <QuestionAndAnswer />
         <AboutTheSeller />
       </div>
 
       <div className={styles.rightColumn}>
-        <ListingDescriptionStack item={item} sidebar />
+        <ListingDescriptionStack item={selectedItem} sidebar />
       </div>
-
     </div>
   );
 }
