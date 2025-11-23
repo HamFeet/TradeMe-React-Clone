@@ -15,7 +15,7 @@ function ListingDescriptionStack({ item }) {
       </div>
       <div className={styles.biddingContainer}>
         <p>Starting Price</p>
-        <h1>${item.start_price}</h1>
+        <h1>${item.startPrice}</h1>
         <button className={`${styles.button} ${styles.buttonPurchase}`}>Place bid</button>
         <button className={`${styles.button} ${styles.buttonPurchase}`}>Buy Now</button>
         <button className={`${styles.button} ${styles.buttonOffer}`}>Make offer</button>
