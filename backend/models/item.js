@@ -13,7 +13,7 @@ const itemSchema = new mongoose.Schema({
 
     seller: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "seller",   
+        ref: "Seller",   
         required: true   
     }
 });

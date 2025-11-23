@@ -34,8 +34,8 @@ export default function AuctionCarousel({
 }) {
 
   // existing state + hooks...
-  const { setSelectedItem } = useSelectedItem();   // ✅ add this line
-  const navigate = useNavigate();                  // ✅ you already imported this
+  const { setSelectedItem } = useSelectedItem();   
+  const navigate = useNavigate();                  
 
 
   const apiBase = import.meta.env.VITE_API_URL || "";
@@ -76,6 +76,7 @@ export default function AuctionCarousel({
       })
       .then((json) => {
         if (alive) {
+          console.log("API response:", json);
           setData(json);
           setErr(null);
         }

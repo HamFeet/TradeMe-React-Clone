@@ -14,6 +14,10 @@ const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
+//middleware
+import cors from "cors";
+app.use(cors());
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -74,6 +78,29 @@ app.get("/items/:id", async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 });
+
+// List Items route
+app.get("/items", async (req, res) => {
+  try {
+    const { page = 1, limit = 12 } = req.query;
+    const items = await Item.find()
+      .skip((page - 1) * limit)
+      .limit(Number(limit))
+      .populate("seller");
+
+    const total = await Item.countDocuments();
+
+    res.json({
+      results: items,
+      total,
+      page: Number(page),
+      limit: Number(limit)
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 // ------------------- START SERVER -------------------
 app.listen(PORT, () => {
