@@ -1,0 +1,41 @@
+.content {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-white);
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.05fr 1fr;
+}
+.container > :nth-child(2) {
+    gap: 10px;
+    grid-row: 2;
+}
+.container > :nth-child(3) {
+    grid-row: 3;
+}
+.mainImage {
+    grid-row: 1;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center; 
+    padding-top: 15px;
+}
+.mainImage img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.gallery {
+    display: flex;
+}
+.gallery > img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 10px 0;
+    background-color: grey;
+}
+.description h3 {
+    padding: 20px 0;
+}

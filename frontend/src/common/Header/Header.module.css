@@ -1,23 +1,123 @@
+/* ---------------------------------
+   Header
+---------------------------------- */
 .header {
-    display: flex;
-    justify-content: space-between;
-    justify-self: center;
-    align-items: center;
-    height: 50px;
-    width: 80vw;
-    background-color: var(--color-bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Top bar background */
+.headerTopBackground {
+  background: var(--color-bg-main);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shared container */
+.headerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top bar content */
+.headerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.headerLinks {
+  display: flex;
+  gap: var(--space-2);
+  padding-left: var(--space-12); /* slight offset to the right */
+}
+
+.headerAuth {
+  display: flex;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+/* Bottom bar background */
+.headerBottomBackground {
+  background: var(--color-white);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerBottom {
+  height: 50px;
+}
+
+/* Logo */
 .header img {
-    height: 21.5px;
-    margin-right: 20px;
+  height: 24px;
+  margin-right: var(--space-4);
 }
-.header button {
-    background-color: var(--color-bg-main);
-    border: none;
-    display: inline-flex;
-    gap: var(--space-1);
+
+/* Buttons */
+.headerButton {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--color-header-dark);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 4px;
+  cursor: pointer;
 }
-.headerLeft {
-    display: flex;
-    align-items: center;
+
+.headerButton:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.headerButton:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Icon sizing inside buttons */
+.headerButton svg {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* Left/right sections */
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headerTop,
+  .headerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .headerLinks {
+    padding-left: var(--space-4);
+  }
 }

@@ -1,86 +1,99 @@
 .content {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    width: 736px;
-    height: 418px;
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
+
 .title {
-    display: flex;
-    width: 100%;
-    /* justify-content: start; */
-    /* align-items: start; */
+  width: 100%;
 }
+
 .title h3 {
-    margin: var(--space-0);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin: 0;
 }
+
 .sellerContainer {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
+
 .sellerProfile {
-    display: flex;
-    flex-direction: column;
-    margin: var(--space-8);
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
 }
+
 .sellerProfile img {
-    background-color: grey;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    margin-top: var(--space-2);
+  background-color: grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
+
 .sellerProfile h3 {
-    margin: var(--space-2);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  margin: 0;
 }
+
 .sellerProfile p {
-    margin: var(--space-2);
+  font-size: var(--fs-body);
+  margin: 0;
 }
-.sellerLocation {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-}
+
+.sellerLocation,
 .sellerJoining {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
 }
+
 .sellerContainer button {
-    width: 100%;
-    height: 39px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    text-align: start;
-    padding: var(--space-0);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  padding: var(--space-2) 0;
+  font-size: var(--fs-body);
+  cursor: pointer;
 }
+
 .sellerContainer button:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
+
 .closingButtons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
 }
+
 .favouritesButton {
-    width: 100%;
-    height: 48px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 4px;
-    margin-top: var(--space-8);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  padding: var(--space-2) var(--space-4);
+  font-weight: 600;
+  cursor: pointer;
 }
+
 .adviceButton {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    padding: var(--space-0);
-    margin-top: var(--space-8);
-    color: var(--color-primary);
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: var(--fs-body);
+  padding: var(--space-2) 0;
+  cursor: pointer;
 }

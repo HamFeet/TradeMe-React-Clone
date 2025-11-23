@@ -16,15 +16,15 @@ import { dummyItems } from './common/data/dummyItems.js'
 
 function App() {
   return (
-    <>
-      <Header/>
-        <Routes>
-          <Route path='/' element={<Landing/>}></Route>
-          <Route path='/listing' element={<Listing item={dummyItems[0]}/>}></Route>
-          <Route path='/compare' element={<CompareListings/>}></Route>
-        </Routes>
-      <Footer/>
-    </>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/listing' element={<Listing item={dummyItems[0]} />} />
+        <Route path='/compare' element={<CompareListings />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

@@ -6,6 +6,7 @@
   margin: 0 auto;
   font-family: var(--font-body);
   color: var(--color-header-dark);
+  background-color: var(--color-white);
 }
 
 .content h1 {
