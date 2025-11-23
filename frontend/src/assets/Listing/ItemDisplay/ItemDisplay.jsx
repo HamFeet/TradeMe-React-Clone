@@ -22,7 +22,7 @@ function ItemDisplay({ item }) {
                 <h3>Details</h3>
                 <p>{`Condition: ${item.condition}`}</p>
                 <h3>Full Description</h3>
-                <p>{item.itemDescription}</p>
+                <p>{item.description}</p>
             </div>
         </div>
     </div>
