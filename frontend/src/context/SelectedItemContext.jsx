@@ -1,9 +1,22 @@
-import React, { createContext, useState, useContext } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const SelectedItemContext = createContext();
 
 export const SelectedItemProvider = ({ children }) => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  // ✅ Load from localStorage on first render
+  const [selectedItem, setSelectedItem] = useState(() => {
+    const saved = localStorage.getItem("selectedItem");
+    return saved ? JSON.parse(saved) : null;
+  });
+
+  // ✅ Save to localStorage whenever it changes
+  useEffect(() => {
+    if (selectedItem) {
+      localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+    } else {
+      localStorage.removeItem("selectedItem"); // clear if none
+    }
+  }, [selectedItem]);
 
   return (
     <SelectedItemContext.Provider value={{ selectedItem, setSelectedItem }}>

@@ -33,7 +33,7 @@ export default function AuctionCard({ item }) {
 
       {/* image placeholder */}
       <div className={styles.image}>
-        <img src={item.imagePath} alt={`A image of ${item.title}`} />
+        {/* <img src={item.imagePath} alt={`A image of ${item.title}`} /> */}
       </div>
 
       {/* meta row */}
