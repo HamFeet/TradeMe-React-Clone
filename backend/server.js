@@ -48,7 +48,7 @@ app.get("/find", async (req, res) => {
         console.log(result);
         res.status(201).json({success: true, data: result});
     }catch (error) {
-        console.error("Error adding item:", error);
+        console.error("Error finding item:", error);
         res.status(500).json({success: false, error: error.message});
     }
 });
@@ -66,7 +66,7 @@ app.put("/update/:id", async (req, res) => {
         const result = await updateItem(id, sanitizedData);
         res.status(201).json({success: true, data: result});
     }catch (error) {
-        console.error("Error adding item:", error);
+        console.error("Error updating item:", error);
         res.status(500).json({success: false, error: error.message});
     }
 });

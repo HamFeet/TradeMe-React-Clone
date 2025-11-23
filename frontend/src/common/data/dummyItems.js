@@ -20,7 +20,7 @@ export const dummyItems = [
     reservePrice: 12000,
     createdAt: "2025-08-15T10:00:00.000Z",
     condition: "New",
-    imagePath: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/White_House_north_and_south_sides.jpg/500px-White_House_north_and_south_sides.jpg",
+    imagePath: "https://upload.wikimedia.org/wikipedia/en/8/84/The_Cabin_in_the_Woods_%282012%29_theatrical_poster.jpg",
     imageDescription: "A new cabin in the woods, with a swimming pool and 6 bedrooms.",
     description: `The Cabin in the Woods is a 2011 science fiction[4] comedy horror film directed by Drew Goddard in his directorial 
                       debut, produced by Joss Whedon, and written by Whedon and Goddard.[5] It stars Kristen Connolly, Chris Hemsworth, 

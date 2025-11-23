@@ -7,6 +7,9 @@ import Landing from './pages/Landing/Landing.jsx';
 import Listing from './pages/Listing/Listing.jsx';
 import CompareListings from './pages/CompareListings/CompareListings.jsx';
 
+//Context
+import { SelectedItemProvider } from "./context/SelectedItemContext";
+
 //Components
 import Header from "./common/Header/Header.jsx";
 import Footer from "./common/Footer/Footer.jsx";
@@ -18,11 +21,14 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/listing' element={<Listing item={dummyItems[0]} />} />
-        <Route path='/compare' element={<CompareListings />} />
-      </Routes>
+      <SelectedItemProvider>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          {/* <Route path='/listing' element={<Listing item={dummyItems[0]} />} /> */}
+          <Route path='/listing' element={<Listing/>} />
+          <Route path='/compare' element={<CompareListings />} />
+        </Routes>
+      </SelectedItemProvider>
       <Footer />
     </div>
   );

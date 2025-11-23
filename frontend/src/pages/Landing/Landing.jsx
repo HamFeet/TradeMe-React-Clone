@@ -1,10 +1,13 @@
 import React from "react";
+
+//Components
 import AuctionCarousel from "../../common/Carousel/AuctionCarousel";
 import LandingSearch from "../../common/LandingSearch/LandingSearch.jsx";
 import CompareButton from "../../common/CompareButton/CompareButton.jsx";
 import SearchHeader from "../../common/SearchHeader/SearchHeader.jsx";
 
 function Landing() {
+  
   const handleCompareClick = () => {
     console.log("Open compare (TODO)");
   };

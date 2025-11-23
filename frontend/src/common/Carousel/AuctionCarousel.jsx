@@ -4,6 +4,10 @@ import AuctionCard from "../AuctionCard/AuctionCard.jsx";
 import cardCss from "../AuctionCard/AuctionCard.module.css";
 import { dummyItems } from "../data/dummyItems.js";
 
+//Routes and Context
+import { useNavigate } from "react-router-dom";
+import { useSelectedItem } from "../../context/SelectedItemContext";
+
 function SkeletonCard() {
   return (
     <article className={`${cardCss.card} ${cardCss.skeleton}`}>
@@ -28,6 +32,12 @@ export default function AuctionCarousel({
   limit = 12,
   useDummy,
 }) {
+
+  // existing state + hooks...
+  const { setSelectedItem } = useSelectedItem();   // ✅ add this line
+  const navigate = useNavigate();                  // ✅ you already imported this
+
+
   const apiBase = import.meta.env.VITE_API_URL || "";
   const shouldUseDummy = useDummy ?? !apiBase; // if no API URL, fall back to dummy
   const [data, setData] = useState({ results: [], total: 0 });
@@ -105,13 +115,29 @@ export default function AuctionCarousel({
 
       {err && <div className={styles.error}>Couldn’t load items: {err}</div>}
 
-      <div ref={scrollerRef} className={styles.scroller}>
+      {/* <div ref={scrollerRef} className={styles.scroller}>
         {(loading ? Array.from({ length: 4 }) : data.results).map((item, i) => (
           <div key={item?._id || i} className={styles.cardWrap}>
             {loading ? <SkeletonCard /> : <AuctionCard item={item} />}
           </div>
         ))}
+      </div> */}
+      
+      <div ref={scrollerRef} className={styles.scroller}>
+        {(loading ? Array.from({ length: 4 }) : data.results).map((item, i) => (
+          <div
+            key={item?._id || i}
+            className={styles.cardWrap}
+            onClick={() => {
+              setSelectedItem(item);
+              navigate("/listing");
+            }}
+          >
+            {loading ? <SkeletonCard /> : <AuctionCard item={item} />}
+          </div>
+        ))}
       </div>
+
     </section>
   );
 }
