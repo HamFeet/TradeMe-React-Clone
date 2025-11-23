@@ -33,6 +33,7 @@ export default function AuctionCard({ item }) {
 
       {/* image placeholder */}
       <div className={styles.image}>
+        {/* Nathan to decide how he wants to call the image */}
         {/* <img src={item.imagePath} alt={`A image of ${item.title}`} /> */}
       </div>
 

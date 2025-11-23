@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 //Connect to db
 export const connectDB = async () => {
     try { 
-        await mongoose.connect('mongodb://localhost:27017/auctioncli');
+        await mongoose.connect('mongodb://localhost:27017/auctiondb');
         console.log('MongoDB connect');
     }catch (err) {
         console.error('Connection error:', err);
