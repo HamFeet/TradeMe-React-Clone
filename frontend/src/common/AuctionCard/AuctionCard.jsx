@@ -32,7 +32,9 @@ export default function AuctionCard({ item }) {
       </div>
 
       {/* image placeholder */}
-      <div className={styles.image} />
+      <div className={styles.image}>
+        <img src={item.imagePath} alt={`A image of ${item.title}`} />
+      </div>
 
       {/* meta row */}
       <div className={styles.metaRow}>
@@ -50,11 +52,11 @@ export default function AuctionCard({ item }) {
       <div className={styles.prices}>
         <div>
           <div className={styles.priceLabel}>Start price</div>
-          <div className={styles.priceValue}>{money(item?.start_price)}</div>
+          <div className={styles.priceValue}>{money(item?.startPrice)}</div>
         </div>
         <div>
           <div className={styles.priceLabel}>Reserve price</div>
-          <div className={styles.priceValue}>{money(item?.reserve_price)}</div>
+          <div className={styles.priceValue}>{money(item?.reservePrice)}</div>
         </div>
       </div>
     </article>
