@@ -101,6 +101,33 @@ app.get("/items", async (req, res) => {
   }
 });
 
+//Udate a existing item with new questions
+app.patch("/items/:id/questions", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { text, answer } = req.body;
+
+    if (!text) {
+      return res.status(400).json({ error: "Question text is required" });
+    }
+
+    // Push a new question into the questions array
+    const updatedItem = await Item.findByIdAndUpdate(
+      id,
+      { $push: { questions: { text, answer } } },
+      { new: true } // return the updated document
+    );
+
+    if (!updatedItem) {
+      return res.status(404).json({ error: "Item not found" });
+    }
+
+    res.json(updatedItem);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 // ------------------- START SERVER -------------------
 app.listen(PORT, () => {

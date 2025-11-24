@@ -15,7 +15,14 @@ const itemSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Seller",   
         required: true   
-    }
+    },
+
+    questions: [
+        {
+            text: { type: String, require: true},
+            answer: { type: String},
+        }
+    ]
 });
 
 const Item = mongoose.model('Item', itemSchema);
