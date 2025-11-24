@@ -19,7 +19,7 @@ function Listing() {
     <div className={styles.container}>
       <div className={styles.leftColumn}>
         <ItemDisplay item={selectedItem} />
-        <QuestionAndAnswer />
+        <QuestionAndAnswer item={selectedItem}/>
         <AboutTheSeller seller={selectedItem.seller}/>
       </div>
 

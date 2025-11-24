@@ -5,7 +5,6 @@ import styles from './AboutTheSeller.module.css'
 function AboutTheSeller({ seller }) {
   return (
     <div className={styles.content}>
-        {console.log(seller.joiningDate)}
         <div className={styles.title}>
             <h3>About the seller</h3>
         </div>
