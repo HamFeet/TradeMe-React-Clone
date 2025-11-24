@@ -2,24 +2,27 @@ import styles from "./ListingCard.module.css";
 import ListingImage from "./ListingImage";
 import ListingInfo from "./ListingInfo";
 import ListingStats from "./ListingStats";
+import ListingPriceBox from "./ListingPriceBox";
+import ListingOverview from "./ListingOverview";
+import SellerCard from "./SellerCard";
 
 /**
- * Day 2:
- * ListingCard now uses three visual sub-components.
+ * Day 3:
+ * Complete ListingCard with all inner sections.
  */
-export default function ListingCard({
-  title = "Coffee Table wooden",
-  image = "/example-table.jpg",
-  location = "Auckland City, Auckland",
-  closes = "Wed 18 Dec, 8:30 pm",
-  views = 177,
-  watchers = 15,
-}) {
+export default function ListingCard(props) {
   return (
     <div className={styles.card}>
-      <ListingImage image={image} />
-      <ListingInfo title={title} location={location} closes={closes} />
-      <ListingStats views={views} watchers={watchers} />
+      <ListingImage image={props.image} />
+      <ListingInfo
+        title={props.title}
+        location={props.location}
+        closes={props.closes}
+      />
+      <ListingStats views={props.views} watchers={props.watchers} />
+      <ListingPriceBox price={79.9} bid={45.0} />
+      <ListingOverview />
+      <SellerCard />
     </div>
   );
 }
