@@ -20,7 +20,7 @@ function Listing() {
       <div className={styles.leftColumn}>
         <ItemDisplay item={selectedItem} />
         <QuestionAndAnswer />
-        <AboutTheSeller />
+        <AboutTheSeller seller={selectedItem.seller}/>
       </div>
 
       <div className={styles.rightColumn}>
