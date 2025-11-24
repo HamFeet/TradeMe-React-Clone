@@ -1,137 +1,30 @@
+/* ------------------------------------------------------------
+   LISTING CARD (TradeMe pixel-perfect)
+------------------------------------------------------------- */
+
 .card {
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
   background: #ffffff;
-  padding: 20px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   display: flex;
   flex-direction: column;
+  gap: 24px;
   width: 100%;
 }
 
-.imagePlaceholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #f7f5f4;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  font-size: 14px;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.location {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 0.25rem;
-}
-
-.info {
-  font-size: 13px;
-  color: #555;
-}
-
-.priceBox {
-  text-align: center;
-  padding: 16px;
-  border: 1px solid #e6e6e6;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  background: #fafafa;
-}
-
-.priceLabel {
-  color: #777;
-  margin-bottom: 4px;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.buyBtn {
-  background: #0076BC;
-  color: white;
-  border-radius: 6px;
-  border: none;
-  width: 100%;
-  padding: 10px 0;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.link {
-  display: block;
-  margin: 8px 0;
-  color: #0076bc;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.placeBid {
-  background: #0076BC;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 15px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.overview {
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-
-.fullListing {
-  background: white;
-  border: 1px solid #0076bc;
-  color: #0076bc;
-  border-radius: 4px;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
-.seller {
-  text-align: center;
-  margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-}
-
-.visitBtn {
-  margin-top: 10px;
-  border: 1px solid #0076BC;
-  color: #0076BC;
-  background: white;
-  border-radius: 6px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
+/* ------------------------------------------------------------
+   IMAGE SECTION
+------------------------------------------------------------- */
 
 .imageWrapper {
-  position: relative;
   width: 100%;
-  height: 260px;
-  border-radius: 10px;
+  height: 300px;
+  border-radius: 12px;
   overflow: hidden;
+  position: relative;
+  background: #f6f6f6;
 }
 
 .image {
@@ -142,36 +35,243 @@
 
 .closeBtn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: white;
+  top: 12px;
+  right: 12px;
+  background: #fff;
   border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.15s ease-in-out;
 }
 
+.closeBtn:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+/* ------------------------------------------------------------
+   INFO SECTION
+------------------------------------------------------------- */
+
 .infoBlock {
-  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 4px;
 }
 
 .title {
   font-size: 18px;
   font-weight: 600;
-  margin: 4px 0;
+  color: #44413d;
 }
 
 .location {
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 4px;
+  color: #6f6f6f;
+  font-size: 13px;
 }
 
 .closes {
   font-size: 13px;
+  color: #6f6f6f;
+}
+
+/* ------------------------------------------------------------
+   STATS SECTION
+------------------------------------------------------------- */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 8px 4px 12px 4px;
+ 
+  font-size: 13px;
   color: #555;
+  margin-bottom: 8px;
+}
+
+.stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ------------------------------------------------------------
+   PRICE BOX
+------------------------------------------------------------- */
+
+.priceBox {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 24px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.priceLabel {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.buyBtn {
+  background: #0076BC;
+  color: #fff;
+  padding: 12px 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.buyBtn:hover {
+  background: #005a94;
+}
+
+.link {
+  margin: 10px 0 16px 0;
+  display: block;
+  color: #0076BC;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.currentBid {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.placeBid {
+  background: #0076BC;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.placeBid:hover {
+  background: #005a94;
+}
+
+/* ------------------------------------------------------------
+   OVERVIEW SECTION
+------------------------------------------------------------- */
+
+.overview {
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 24px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Title */
+.overview h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+/* Each line */
+.overview p {
+  margin: 3px 0;
+}
+
+/* Long paragraph */
+.overview p:nth-of-type(3) {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Dimensions */
+.overview p:last-of-type {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+/* Button */
+.fullListing {
+  width: fit-content;
+  border: 1px solid #0076BC;
+  color: #0076BC;
+  padding: 9px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background: white;
+  transition: 0.15s ease-in-out;
+}
+
+.fullListing:hover {
+  background: #f0f8ff;
+  border-color: #005a94;
+  color: #005a94;
+}
+
+/* ------------------------------------------------------------
+   SELLER SECTION
+------------------------------------------------------------- */
+
+.seller {
+  border-top: 1px solid #eeeeee;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.seller h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.seller p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.visitBtn {
+  margin-top: 12px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: 1px solid #0076BC;
+  color: #0076BC;
+  background: white;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  font-size: 14px;
+}
+
+.visitBtn:hover {
+  background: #f0f8ff;
+  border-color: #005a94;
+  color: #005a94;
 }
