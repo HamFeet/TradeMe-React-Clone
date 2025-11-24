@@ -1,10 +1,9 @@
 import styles from "./CompareListings.module.css";
 import ListingCard from "./components/ListingCard";
+import CompareListingsFooter from "./components/CompareListingsFooter";
 
 /**
- * Day 1: CompareListings page skeleton.
- * - Defines the main layout.
- * - Renders header, two mock cards, and footer note.
+ * CompareListings – full page including the new footer.
  */
 export default function CompareListings() {
   const listings = [
@@ -14,10 +13,8 @@ export default function CompareListings() {
 
   return (
     <div className={styles.container}>
-      {/* Header section */}
       <header className={styles.pageHeader}>
         <h1 className={styles.title}>Compare listings</h1>
-
         <div className={styles.actions}>
           <button className={styles.backBtn}>← Back to search</button>
           <a href="#" className={styles.removeAll}>
@@ -26,21 +23,14 @@ export default function CompareListings() {
         </div>
       </header>
 
-      {/* Listings grid */}
       <section className={styles.grid}>
         {listings.map((item) => (
           <ListingCard key={item.id} title={item.title} />
         ))}
       </section>
 
-      {/* Bottom note */}
-      <footer className={styles.footerNote}>
-        <p>We are upgrading some of our systems</p>
-        <div className={styles.links}>
-          <a href="#">Learn more</a>
-          <a href="#">Tell us what you think</a>
-        </div>
-      </footer>
+      {/* Use the small footer component here */}
+      <CompareListingsFooter />
     </div>
   );
 }

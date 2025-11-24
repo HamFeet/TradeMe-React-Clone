@@ -1,12 +1,12 @@
 .card {
   border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  background: #fff;
-  padding: 16px;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  width: 100%;
 }
 
 .imagePlaceholder {
@@ -35,6 +35,143 @@
 }
 
 .info {
+  font-size: 13px;
+  color: #555;
+}
+
+.priceBox {
+  text-align: center;
+  padding: 16px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.priceLabel {
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.buyBtn {
+  background: #0076BC;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.link {
+  display: block;
+  margin: 8px 0;
+  color: #0076bc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.placeBid {
+  background: #0076BC;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.overview {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.fullListing {
+  background: white;
+  border: 1px solid #0076bc;
+  color: #0076bc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.seller {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.visitBtn {
+  margin-top: 10px;
+  border: 1px solid #0076BC;
+  color: #0076BC;
+  background: white;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.infoBlock {
+  margin-top: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.location {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.closes {
   font-size: 13px;
   color: #555;
 }
