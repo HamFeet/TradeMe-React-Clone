@@ -68,16 +68,17 @@ app.post("/item/add", async (req, res) => {
   }
 });
 
-//GET route with populate
+// Get item by ID
 app.get("/items/:id", async (req, res) => {
   try {
-    const item = await Item.findById(req.params.id).populate("seller");
-    if (!item) return res.status(404).json({ success: false, error: "Item not found" });
-    res.json({ success: true, data: item });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    const item = await Item.findById(req.params.id);
+    if (!item) return res.status(404).json({ error: "Item not found" });
+    res.json(item);
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
   }
 });
+
 
 // List Items route
 app.get("/items", async (req, res) => {
@@ -96,6 +97,33 @@ app.get("/items", async (req, res) => {
       page: Number(page),
       limit: Number(limit)
     });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+//Udate a existing item with new questions
+app.patch("/items/:id/questions", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { text, answer } = req.body;
+
+    if (!text) {
+      return res.status(400).json({ error: "Question text is required" });
+    }
+
+    // Push a new question into the questions array
+    const updatedItem = await Item.findByIdAndUpdate(
+      id,
+      { $push: { questions: { text, answer } } },
+      { new: true } // return the updated document
+    );
+
+    if (!updatedItem) {
+      return res.status(404).json({ error: "Item not found" });
+    }
+
+    res.json(updatedItem);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

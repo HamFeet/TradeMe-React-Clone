@@ -10,5 +10,12 @@ export const itemSanitizer = z.object({
     imagePath: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
     imageDescription: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
     description: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
-    sellerId: z.string().length(24)
+    sellerId: z.string().length(24),
+
+    questions: z.array(
+        z.object({
+            text: z.string().min(1).transform((val) => sanitizeHtml(val.trim())),
+            answer: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional()
+        })
+    ).optional()
 }).strip();
