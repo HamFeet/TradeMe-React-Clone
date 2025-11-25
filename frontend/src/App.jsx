@@ -1,11 +1,11 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./styles/base.css";
 
 //Pages
-import Landing from './pages/Landing/Landing.jsx';
-import Listing from './pages/Listing/Listing.jsx';
-import CompareListings from './pages/CompareListings/CompareListings.jsx';
+import Landing from "./pages/Landing/Landing.jsx";
+import Listing from "./pages/Listing/Listing.jsx";
+import CompareListings from "./pages/CompareListings/CompareListings.jsx";
 
 //Context
 import { SelectedItemProvider } from "./context/SelectedItemContext";
@@ -15,7 +15,7 @@ import Header from "./common/Header/Header.jsx";
 import Footer from "./common/Footer/Footer.jsx";
 
 //Data
-import { dummyItems } from './common/data/dummyItems.js'
+import { dummyItems } from "./common/data/dummyItems.js";
 
 function App() {
   return (
@@ -23,10 +23,10 @@ function App() {
       <Header />
       <SelectedItemProvider>
         <Routes>
-          <Route path='/' element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           {/* <Route path='/listing' element={<Listing item={dummyItems[0]} />} /> */}
-          <Route path='/listing' element={<Listing/>} />
-          <Route path='/compare' element={<CompareListings />} />
+          <Route path="/listing" element={<Listing />} />
+          <Route path="/compare" element={<CompareListings />} />
         </Routes>
       </SelectedItemProvider>
       <Footer />

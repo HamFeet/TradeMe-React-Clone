@@ -1,15 +1,17 @@
 import mongoose from "mongoose";
 
-//Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 
-//Connect to db
+const MONGO_URI =
+  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/auctiondb";
+
 export const connectDB = async () => {
-    try { 
-        await mongoose.connect('mongodb://localhost:27017/auctiondb');
-        console.log('MongoDB connect');
-    }catch (err) {
-        console.error('Connection error:', err);
-        process.exit(1);
-    }
+  console.log("🔌 Connecting to Mongo at:", MONGO_URI);
+  try {
+    await mongoose.connect(MONGO_URI);
+    console.log("✅ MongoDB connected");
+  } catch (err) {
+    console.error("❌ Connection error:", err);
+    process.exit(1);
+  }
 };
