@@ -7,4 +7,6 @@ export const sellerSanitizer = z.object({
   location: z.string().min(1).transform((val) => sanitizeHtml(val.trim())),
   joiningDate: z.string().min(1).transform((val) => sanitizeHtml(val.trim())),
   rating: z.coerce.number().min(0).max(5).default(0),
+  avatarUrl: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+
   }).strip();
