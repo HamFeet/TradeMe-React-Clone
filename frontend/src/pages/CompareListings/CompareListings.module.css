@@ -1,118 +1,84 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 32px 24px 40px; /* antes 24px 24px 40px */
   font-family: "Inter", sans-serif;
   color: #44413d;
 }
 
+/* Header superior: "Compare listings" + Back + Remove all */
 .pageHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .backBtn {
   background: none;
   border: none;
   color: #0076bc;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.backBtn:hover {
+  background: #f0f8ff;
 }
 
 .removeAll {
   color: #0076bc;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 2 columnas SIEMPRE */
-  gap: 24px;
-  margin-top: 24px;
+.removeAll:hover {
+  text-decoration: underline;
 }
 
+/* Grid - 2  */
+.grid {
+  display: flex;               
+  gap: 32px;                     
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Footer inferior "We are upgrading..." */
 .footerNote {
+  margin-top: 32px;
   text-align: center;
-  margin-top: 2rem;
-  font-size: 13px;
+  font-size: 12px;
   color: #777;
 }
 
 .links {
-  margin-top: 0.5rem;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .links a {
   color: #0076bc;
+  font-size: 12px;
   text-decoration: none;
 }
 
 .links a:hover {
   text-decoration: underline;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 1rem;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.infoBlock {
-  margin-bottom: 0.5rem;
-}
-
-.closes {
-  font-size: 13px;
-  color: #555;
-}
-
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 13px;
-  color: #555;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
 }
