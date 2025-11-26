@@ -10,6 +10,16 @@ export const itemSanitizer = z.object({
     imagePath: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
     imageDescription: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
     description: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+    city: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+    region: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+    closesAt: z.coerce.date().optional(),
+    views: z.coerce.number().int().min(0).optional(),
+    watchers: z.coerce.number().int().min(0).optional(),
+
+    colour: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+    dimensions: z.string().min(1).transform((val) => sanitizeHtml(val.trim())).optional(),
+
+
     sellerId: z.string().length(24),
 
     questions: z.array(
