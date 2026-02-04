@@ -87,23 +87,23 @@ I was a core contributor to this project, working across both the frontend and b
 ### Steps
 
 1. **Clone the repository**
-   
+   ```bash
    git clone https://github.com/HamFeet/TradeMe-React-Clone.git
    cd TradeMe-React-Clone
 
 2. **Install dependencies**
-
+   ```bash
    npm install
 
 3. **Set up environment variables**
-
+   ```bash
    MONGO_URI=your_mongodb_connection_string
    PORT=3001
 
 4. **Start the application**
-
+   ```bash
    npm start
 
 5. **Open your browser at:**
-
+   ```bash
     http://localhost:3000
