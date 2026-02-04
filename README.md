@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mission 5 Phase 2 Readme
 
 Replace me with an introduction to the project.
@@ -20,3 +21,6 @@ Replace me with more details about the project.
 ## Contributors
 
 Replace me with the contributors of the project and their GitHub profiles.
+=======
+# TradMe-React-Clone
+>>>>>>> 0f5f2f31bd613e1ecbb50010f5dc961905b95af3
